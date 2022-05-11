@@ -1,0 +1,12 @@
+.header {
+    padding: 30px;
+    text-align: center;
+    color: #800080;
+    font-size: 40px;
+  }
+
+.logo {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
