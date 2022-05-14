@@ -53,8 +53,7 @@
           <input type="checkbox" value="remember-me" id="loggedIn"> Remember me
         </label>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="login()" id="signIn">Sign in</button>
-      <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="register()" id="signUp">Register</button>
+      <button class="w-100 btn btn-lg btn-primary" id="signIn">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2022 KHAS Student Portal</p>
     </form>
   </main>
@@ -62,12 +61,12 @@
 
 
 </body>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+<script async src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script type="module">
-
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase.js";
   const firebaseConfig = {
     apiKey: "AIzaSyAzr965rYdg33teclT2U4YjeeT1uW34qOI",
     authDomain: "ge400project.firebaseapp.com",
@@ -78,19 +77,13 @@
     appId: "1:259900272488:web:21ea1807714b7bbfccf0dd",
     measurementId: "G-CZ4M5EFJCR"
   };
-  //const app = initializeApp(firebaseConfig);
-  const db = firebase.database();
 
-  const email = document.getElementById('email');
-  const password = document.getElementById('password');
-  function validation() {
-    let emailregex = /^[a-zA-Z0-9]+@(stu.khas.edu.tr)$/;
-    if (!emailregex.test(email.value)) {
-      alert("Please enter a valid email");
-      return;
-    }
-  }
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const database = firebase.database();
+
 </script>
-<script src="index.js"></script>
+<script async type="module" src="./index.js"></script>
 
 </html>
