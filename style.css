@@ -659,3 +659,93 @@ body{margin-top:20px;}
   right: 0px;
   bottom: 0px;
 }
+
+.table-head{
+  display: flex;
+}
+
+.table-head div{
+  padding: 5px;
+  margin: 2px;
+  background-color: rgb(104, 140, 218);
+  font-weight: bold;
+}
+
+.table-head .status{
+  flex: 5%;
+}
+
+.table-head .subjects{
+  flex: 70%;
+}
+
+.table-head .replies{
+  flex: 10%;
+}
+
+.table-head .last-reply{
+  flex: 15%;
+}
+
+
+.table-row{
+  display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+  padding: 5px;
+  margin: 2px;
+  background-color: rgb(104, 140, 218);
+}
+
+.table-row .status{
+  flex: 5%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.table-row .subjects{
+  flex: 70%;
+}
+
+.table-row .replies{
+  flex: 10%;
+}
+
+.table-row .last-reply{
+  flex: 15%;
+}
+
+.navigate{
+  margin-block: 20px;
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+.navigate a{
+  color: rgb(0, 0, 0);
+}
+
+.navigate a:hover{
+  color:#4f1666;
+  font-weight: bolder;
+}
+
+
+.pagination{
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+  font-size: 15px;
+}
+
+.pagination a{
+  color: #fff;
+  margin-inline: 5px;
+  padding: 5px 10px;
+  border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+  opacity: 0.5;
+}
